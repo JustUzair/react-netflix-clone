@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="minimum-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1"
+    />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -24,9 +29,16 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React Redux App</title>
+    <title>Netflix Clone</title>
   </head>
   <body>
+    <script async>
+      var viewport = document.querySelector("meta[name=viewport]");
+      viewport.setAttribute(
+        "content",
+        viewport.content + ", height=" + window.innerHeight
+      );
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

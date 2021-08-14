@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap");
+.row {
+  color: white;
+  margin-left: 20px;
+  min-width: 15rem;
+}
+.info {
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  border-left: 2px solid #e50914;
+  padding-left: 7px;
+}
+.row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+  position: relative;
+}
+.row__posters:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 10vw;
+  background: #fff;
+}
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+.row__poster {
+  max-height: 100px;
+  object-fit: contain;
+  margin-right: 10px;
+  border-radius: 0.2vw;
+  cursor: pointer;
+  margin-bottom: 5px;
+  z-index: 3;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+  opacity: 1;
+  border-bottom: 3px solid #e50914;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.row__posterLarge {
+  max-height: 250px;
+  margin-bottom: 10px;
+}
+.row__posterLarge:hover {
+  content: attr(data-title);
+  transform: scale(1.09);
+  opacity: 1;
+}
+@media (pointer: coarse), (hover: none) {
+  [title] {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+  }
+  [title]:focus::after {
+    content: attr(title);
+    position: absolute;
+    top: 90%;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid;
+    width: fit-content;
+    padding: 3px;
+  }
+}

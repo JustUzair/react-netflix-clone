@@ -1,2 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
+user-agent: magicsearchbot
+disallow: /uploads/# start of file
+user-agent: *
+disallow: /downloads/
